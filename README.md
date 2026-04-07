@@ -1,45 +1,45 @@
-# 🏢🤝🔒 Simulación de Firma Digital y Cifrado entre Empresa y Proveedor
+# 🏢🤝🔒 Simulation of Digital Signature and Encryption between Company and Provider
 
-Este proyecto es una **simulación** de un proceso de firma digital y cifrado de mensajes entre una **empresa** y un **proveedor**, utilizando la librería `cryptography` de Python. El objetivo es demostrar cómo se pueden proteger documentos y comunicaciones en un entorno digital, asegurando **autenticidad**, **integridad** y **confidencialidad**.
+This project is a **simulation** of a digital signature and message encryption process between a **company** and a **provider**, using Python's `cryptography` library. The goal is to demonstrate how documents and communications can be protected in a digital environment, ensuring **authenticity**, **integrity**, and **confidentiality**.
 
-> ⚠️ **Nota:** Este trabajo está orientado principalmente a mostrar **cómo se lleva a cabo la solución e implementación** de un sistema de firma digital y cifrado, más que a su ejecución práctica. Es ideal para entender el procedimiento y los pasos criptográficos involucrados, no tanto para un uso productivo o automatizado.
+> ⚠️ **Note:** This work is primarily aimed at showing **how the solution and implementation are carried out**, rather than for practical execution. It's ideal for understanding the procedure and the cryptographic steps involved, not for production or automated use.
 
-## 🚀 ¿Qué hace este trabajo?
+## 🚀 What this project does
 
-- **Genera claves públicas y privadas** para ambas partes (empresa y proveedor).
-- **Crea un contrato digital** que puede ser firmado por ambas partes.
-- **Firma digitalmente** el contrato usando las claves privadas y verifica la validez de las firmas con las claves públicas.
-- **Adjunta certificados digitales simulados** a cada firma.
-- **Cifra y descifra mensajes** entre la empresa y el proveedor, incluyendo un sello de tiempo para mayor seguridad.
-- **Exporta el documento firmado** en formato JSON, mostrando todas las firmas y certificados.
+- **Generates public and private keys** for both parties (company and provider).
+- **Creates a digital contract** that can be signed by both parties.
+- **Digitally signs** the contract using private keys and verifies the signatures using public keys.
+- **Attaches simulated digital certificates** to each signature.
+- **Encrypts and decrypts messages** between the company and the provider, including a timestamp for added security.
+- **Exports the signed document** in JSON format, showing all signatures and certificates.
 
-## 🛡️ ¿Por qué es seguro?
+## 🛡️ Why it's secure
 
-El proyecto utiliza la librería `cryptography`, que implementa algoritmos criptográficos modernos y robustos, como:
+The project uses the `cryptography` library, which implements modern and robust cryptographic algorithms such as:
 
-- **RSA** para generación de claves, firma digital y cifrado asimétrico.
-- **SHA-256** para la generación de hashes seguros.
-- **Padding OAEP y PSS** para proteger contra ataques criptográficos conocidos.
-- **Sello de tiempo** para evitar ataques de repetición y garantizar la validez temporal de las firmas y mensajes.
+- **RSA** for key generation, digital signatures, and asymmetric encryption.
+- **SHA-256** for secure hash generation.
+- **OAEP and PSS padding** to protect against known cryptographic attacks.
+- **Timestamps** to prevent replay attacks and ensure temporal validity of signatures and messages.
 
-Estas herramientas permiten simular un sistema real de protección de documentos y comunicaciones, como los que se usan en sistemas de **PKI (Infraestructura de Clave Pública)** en la vida real.
+These tools allow simulating a real document and communication protection system similar to those used in **PKI (Public Key Infrastructure)** systems in real-world environments.
 
-## 📦 Estructura del código
+## 📦 Code structure
 
-- **PKI.py**: Contiene toda la lógica de generación de claves, firma, verificación, cifrado, descifrado y manejo de certificados y documentos.
-- **README.md**: Este archivo, con la explicación del proyecto.
+- **PKI.py**: Contains all the logic for key generation, signing, verification, encryption, decryption, and handling certificates and documents.
+- **README.md**: This file, explaining the project.
 
-## 📝 Ejemplo de uso
+## 📝 Usage example
 
-Al ejecutar el script, verás cómo:
-1. Se crea un contrato.
-2. La empresa lo firma digitalmente.
-3. El proveedor verifica la firma y, si es válida, también firma el contrato.
-4. Se exporta el contrato firmado por ambas partes.
-5. Se envía un mensaje cifrado de la empresa al proveedor, que solo el proveedor puede descifrar.
+When running the script you will see how:
+1. A contract is created.
+2. The company signs it digitally.
+3. The provider verifies the signature and, if valid, also signs the contract.
+4. The contract signed by both parties is exported.
+5. An encrypted message is sent from the company to the provider that only the provider can decrypt.
 
-## 📚 Requisitos
+## 📚 Requirements
 
 - Python 3.8+
-- Instalar la librería `cryptography`:
+- Install the `cryptography` library
 
